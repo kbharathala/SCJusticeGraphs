@@ -21,6 +21,7 @@ def get_case_text(temp):
 
 def get_opinions(case):
 	opinions_list = []
+	count = 0
 	while(case.find('opinion1=') != -1):
 		##find opinion
 		first = case.find('opinion1=')
@@ -33,15 +34,26 @@ def get_opinions(case):
 		justice = case[first2+2:first2+last2+2]
 		case = case[first2+last2:]
 		## update
-		opinions_list.append([justice, opinion])
+		if(len(justice) < 15):
+			opinions_list.append([justice, opinion])
 	return opinions_list
 
-f = open('2014Cases.txt', 'r')
-text = f.read()
-case_list = get_case_text(text)
+case_list = []
+fieldnames = ['names']
 
-with open('2014CasesTrial.csv', 'wb') as csvfile:
-	fieldnames = ['names'] + map(lambda x:x.lower(), get_justices(text))
+for i in range(2000, 2015):
+	f = open(str(i)+"Cases.txt", 'r')
+	text = f.read()
+	case_list = case_list + get_case_text(text)
+	for judge in get_justices(text):
+		if judge.lower() not in fieldnames:
+			fieldnames.append(judge.lower())
+
+#f = open('2014Cases.txt', 'r')
+#text = f.read()
+#case_list = get_case_text(text)
+
+with open('CasesTrial.csv', 'wb') as csvfile:
 	writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 	writer.writeheader()
 	for case in case_list:

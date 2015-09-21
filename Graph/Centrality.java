@@ -29,79 +29,73 @@ public class Centrality{
 				String [] s = reader.next().split(",");
 				String justice = s[0];
 				for(int j=1; j<s.length; j++){
-					if(!labels.get(j).equals(justice)){
+					if(!labels.get(j).equals(justice)&& g.getEdgeWeight(labels.get(j),justice)== -1){
 						g.addEdge(justice,labels.get(j),new Integer(s[j]));
 					}
 				}
 				i++;
 			}
 			//g.printString();
-			HashMap<String, Double> centrality_measures = centrality(g); 
+			HashMap<String, Double> centrality_measures = laplacianCentrality(g); 
 			for(String s: centrality_measures.keySet())
-				System.out.println(centrality_measures.get(s));
+				System.out.println(s + " " + centrality_measures.get(s));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	public static HashMap<String, Double> centrality(Graph g) {
-		if (g == null) {
-			throw new IllegalArgumentException();
+	
+	public static HashMap<String, Double> laplacianCentrality(Graph g) {
+		HashMap<String, Double> centralities = new HashMap<String, Double>();
+		double whole = laplacianEnergy(g);
+		for(String s: g.getVertexIds()){
+			Graph minus = new Graph(g);
+			minus.removeVertex(s);
+			centralities.put(s, (whole-laplacianEnergy(minus))/whole);
 		}
-		HashMap<String, Double> cb = new HashMap<String, Double>();
-		LinkedList Q = new LinkedList();
-		HashMap<String, ArrayList> p = new HashMap<String, ArrayList>();
-		HashMap<String, Double> sigma = new HashMap<String, Double>();
-		HashMap<String, Double> d = new HashMap<String, Double>();
-		for (String u : g.getVertexIds()) {
-			cb.put(u, 0.0);
-		}
-		for (String user : g.getVertexIds()) {
-			Q = new LinkedList();
-			Stack s = new Stack();
-			for (String u : g.getVertexIds()) {
-				sigma.put(u, 0.0);
-				d.put(u, (-1.0));
-				p.put(u, new ArrayList());
-			}
-			sigma.put(user, 1.0);
-			d.put(user, 0.0);
-			Q.add(user);
-			while (!Q.isEmpty()) {
-				String v = (String) Q.poll();
-				s.push(v);
-				for (String w : g.getNeighbors(v)) {
-					if (d.get(w) < 0) {
-						Q.add(w);
-						d.put(w, d.get(v) + 1);
-					}
-					if (d.get(w).equals(d.get(v) + 1)) {
-						sigma.put(w, sigma.get(w) + sigma.get(v));
-						p.get(w).add(v);
-					}
-				}
-			}
-			HashMap<String, Double> delta = new HashMap<String, Double>();
-			for (String u : g.getVertexIds()) {
-				delta.put(u, 0.0);
-			}
-			while (!s.isEmpty()) {
-				System.out.println(user + "-->");
-				String w = (String) s.pop();
-				for (Object v : p.get(w)) {
-					delta.put((String) v,
-							delta.get(v)
-									+ (((double) sigma.get(v)) / ((double) sigma
-											.get(w)))
-									* (1 + 1.0 * delta.get(w)));
-					if (!w.equals(user)) {
-						cb.put(w, cb.get(w) + delta.get(w));
-						System.out.println("hey" + delta.get(w));
-					}
-				}
-			}
-		}
-		return cb;
+		return centralities;
 	}
-
+	
+	public static double laplacianEnergy(Graph g) {
+		int [][] w = new int[g.getVertexIds().size()][g.getVertexIds().size()];
+		for(String a: g.getVertexIds()){
+			for(String b: g.getVertexIds()){
+				if(a!= null && b!=null){
+					if(!a.equals(b)){
+						if(g.getEdgeWeight(a,b)== -1)
+							w[g.Vertexes.get(a)][g.Vertexes.get(b)] = g.getEdgeWeight(b,a);
+						else 
+							w[g.Vertexes.get(a)][g.Vertexes.get(b)] = g.getEdgeWeight(a,b);
+					}
+					else{
+						w[g.Vertexes.get(a)][g.Vertexes.get(b)] = 0;
+					}
+				}
+			}
+		}
+		for(String a: g.getVertexIds()){
+			for(String b: g.getVertexIds()){
+				if(a.equals(b)){
+					int sum = 0; 
+					for(int j=0; j<w[0].length;j++){
+						sum += w[g.Vertexes.get(a)][j];
+					}
+					w[g.Vertexes.get(a)][g.Vertexes.get(b)] = sum *-1;
+				}
+			}	
+		}
+		double energy=0; 
+		for(String a: g.getVertexIds()){
+			for(String b: g.getVertexIds()){
+				if(!a.equals(b)){
+					energy += 2*(double)w[g.Vertexes.get(a)][g.Vertexes.get(b)] * w[g.Vertexes.get(a)][g.Vertexes.get(b)];
+				}
+				else{
+					energy += 
+							w[g.Vertexes.get(a)][g.Vertexes.get(b)] * w[g.Vertexes.get(a)][g.Vertexes.get(b)];
+				}
+			}
+		}
+		return energy;
+	}
 }

@@ -7,17 +7,20 @@ import java.util.Set;
 
 public class Graph {
 	private HashMap<String, HashMap<String, Integer>> adjacencylist;
-	private HashSet<Vertex> Vertexes;
+	public HashMap<String, Integer> Vertexes;
+	private int count;
 
 	public Graph() {
 		adjacencylist = new HashMap<String, HashMap<String, Integer>>();
-		Vertexes = new HashSet<Vertex>();
+		Vertexes = new HashMap<String, Integer>();
+		count = 0;
 	}
 
 	public Graph(Graph g) {
 		adjacencylist = new HashMap<String, HashMap<String, Integer>>(
 				g.adjacencylist);
-		Vertexes = g.Vertexes;
+		Vertexes = new HashMap<String, Integer>(g.Vertexes);
+		count = g.count;
 	}
 
 	public void printString() {
@@ -38,17 +41,30 @@ public class Graph {
 		adjacencylist.get(v).put(u, w);
 	}
 	
-	public boolean addVertex(Vertex u) {
+	public boolean addVertex(Vertex u) { 
 		if (adjacencylist.containsKey(u)) {
 			return false;
 		}
 		adjacencylist.put(u.name, new HashMap<String, Integer>());
-		Vertexes.add(u);
+		Vertexes.put(u.name, count);
+		count++;
+		return true;
+	} 
+	
+	public boolean removeVertex(String u) {
+		for(String n: getNeighbors(u))
+			adjacencylist.get(n).remove(u);
+		adjacencylist.remove(u);
+		int adjust = Vertexes.get(u);
+		for(String s : Vertexes.keySet())
+			if(Vertexes.get(s)>Vertexes.get(u))
+				Vertexes.put(s,Vertexes.get(s)-1);
+		Vertexes.remove(u); 
 		return true;
 	}
 
 	public Set<String> getVertexIds() {
-		return adjacencylist.keySet();
+		return Vertexes.keySet();
 	}
 
 	public Set<String> getNeighbors(String s) {

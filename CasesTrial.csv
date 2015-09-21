@@ -1,17 +1,17 @@
 names,rehnquist,stevens,o'connor,scalia,kennedy,souter,thomas,ginsburg,breyer,roberts,alito,sotomayor,kagan,,rehnquist,stevens,o'connor,scalia,kennedy,souter,thomas,ginsburg,breyer,roberts,alito,sotomayor,kagan
-Artuz v. Bennett,1,1,1,1,1,1,1,1,1,,,,,rehnquist,413,245,338,335,359,268,336,265,276,0,0,0,0
-article=Cleveland v. United States (2000),1,1,1,1,1,1,1,1,1,,,,,stevens,245,821,305,457,537,593,434,656,660,256,213,69,0
-Sinkfield v. Kelley,1,1,1,1,1,1,1,1,1,,,,,o'connor,338,305,438,317,348,331,306,320,339,23,0,0,0
-Indianapolis v. Edmond,0,1,1,0,1,1,0,1,1,,,,,scalia,335,457,317,999,765,430,857,574,578,492,427,167,116
-Eastern Associated Coal Corp. v. Mine Workers,1,1,1,0.5,1,1,0.5,1,1,,,,,kennedy,359,537,348,765,999,516,747,681,711,492,439,200,134
-Bush v. Palm Beach County Canvassing Bd.,1,1,1,1,1,1,1,1,1,,,,,souter,268,593,331,430,516,729,435,639,614,207,185,0,0
-Green Tree Financial Corp.-Ala. v. Randolph,1,1,1,1,1,1,1,1,1,,,,,thomas,336,434,306,857,747,435,999,564,563,468,440,164,111
-Bush v. Gore,1,0,1,1,1,0,1,0,0,,,,,ginsburg,265,656,320,574,681,639,564,999,851,373,346,223,153
-Solid Waste Agency of Northern Cook Cty. v. Army Corps of Engineers,1,0,1,1,1,0,1,0,0,,,,,breyer,276,660,339,578,711,614,563,851,999,390,378,226,152
-Glover v. United States,1,1,1,1,1,1,1,1,1,,,,,roberts,0,256,23,492,492,207,468,373,390,586,476,193,127
-Gitlitz v. Commissioner,1,1,1,1,1,1,1,1,0,,,,,alito,0,213,0,427,439,185,440,346,378,476,561,171,115
-article=Fiore v. White (2001),1,1,1,1,1,1,1,1,1,,,,,sotomayor,0,69,0,167,200,0,164,223,226,193,171,270,156
-Lopez v. Davis,0,0,1,1,0,1,1,1,1,,,,,kagan,0,0,0,116,134,0,111,153,152,127,115,156,178
+Artuz v. Bennett,1,1,1,1,1,1,1,1,1,,,,,rehnquist,1.00000000,0.59322034,0.81840194,0.81113801,0.86924939,0.64891041,0.81355932,0.64164649,0.66828087,0.00000000,0.00000000,0.00000000,0.00000000
+article=Cleveland v. United States (2000),1,1,1,1,1,1,1,1,1,,,,,stevens,0.59322034,1.00000000,0.69634703,0.55663825,0.65408039,0.81344307,0.52862363,0.79902558,0.80389769,0.62745098,0.55613577,0.75000000,0.00000000
+Sinkfield v. Kelley,1,1,1,1,1,1,1,1,1,,,,,o'connor,0.81840194,0.69634703,1.00000000,0.72374429,0.79452055,0.75570776,0.69863014,0.73059361,0.77397260,0.92000000,0.00000000,0.00000000,0.00000000
+Indianapolis v. Edmond,0,1,1,0,1,1,0,1,1,,,,,scalia,0.81113801,0.55663825,0.72374429,1.00000000,0.75412541,0.58984911,0.85396040,0.58133774,0.58003300,0.82853567,0.75839793,0.60248447,0.64615385
+Eastern Associated Coal Corp. v. Mine Workers,1,1,1,0.5,1,1,0.5,1,1,,,,,kennedy,0.86924939,0.65408039,0.79452055,0.75412541,1.00000000,0.70781893,0.73432343,0.68951280,0.72277228,0.82227785,0.77131783,0.73913043,0.75641026
+Bush v. Palm Beach County Canvassing Bd.,1,1,1,1,1,1,1,1,1,,,,,souter,0.64891041,0.81344307,0.75570776,0.58984911,0.70781893,1.00000000,0.59670782,0.87654321,0.84224966,0.65506329,0.63573883,0.00000000,0.00000000
+Green Tree Financial Corp.-Ala. v. Randolph,1,1,1,1,1,1,1,1,1,,,,,thomas,0.81355932,0.52862363,0.69863014,0.85396040,0.73432343,0.59670782,1.00000000,0.56069364,0.56188119,0.78222778,0.79586563,0.57142857,0.58461538
+Bush v. Gore,1,0,1,1,1,0,1,0,0,,,,,ginsburg,0.64164649,0.79902558,0.73059361,0.58133774,0.68951280,0.87654321,0.56069364,1.00000000,0.85631709,0.63784461,0.59637775,0.84232365,0.89203085
+Solid Waste Agency of Northern Cook Cty. v. Army Corps of Engineers,1,0,1,1,1,0,1,0,0,,,,,breyer,0.66828087,0.80389769,0.77397260,0.58003300,0.72277228,0.84224966,0.56188119,0.85631709,1.00000000,0.68210263,0.65762274,0.85300207,0.88461538
+Glover v. United States,1,1,1,1,1,1,1,1,1,,,,,roberts,0.00000000,0.62745098,0.92000000,0.82853567,0.82227785,0.65506329,0.78222778,0.63784461,0.68210263,1.00000000,0.82687339,0.69358178,0.68974359
+Gitlitz v. Commissioner,1,1,1,1,1,1,1,1,0,,,,,alito,0.00000000,0.55613577,0.00000000,0.75839793,0.77131783,0.63573883,0.79586563,0.59637775,0.65762274,0.82687339,1.00000000,0.60869565,0.60769231
+article=Fiore v. White (2001),1,1,1,1,1,1,1,1,1,,,,,sotomayor,0.00000000,0.75000000,0.00000000,0.60248447,0.73913043,0.00000000,0.57142857,0.84232365,0.85300207,0.69358178,0.60869565,1.00000000,0.88717949
+Lopez v. Davis,0,0,1,1,0,1,1,1,1,,,,,kagan,0.00000000,0.00000000,0.00000000,0.64615385,0.75641026,0.00000000,0.58461538,0.89203085,0.88461538,0.68974359,0.60769231,0.88717949,1.00000000
 Seling v. Young,1,0,1,1,1,1,0.5,1,1,,,,,,,,,,,,,,,,,,
 "City News & Novelty, Inc. v. Waukesha",1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,
 #NAME?,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,,
@@ -437,7 +437,7 @@ Will v. Hallock,,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,
 Central Virginia Community College v. Katz,,1,1,0,0,1,0,1,1,0,,,,,,,,,,,,,,,,,
 "Unitherm Food Systems, Inc. v. Swift-Eckrich, Inc.",,0,1,1,0,1,1,1,1,1,,,,,,,,,,,,,,,,,
 "Wisconsin Right to Life, Inc. v. FEC",,1,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,,
-article=Gonzales v. O Centro Espí_rita Beneficente Unií£o do Vegetal,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+article=Gonzales v. O Centro Esp’_rita Beneficente Uni’£o do Vegetal,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 "Buckeye Check Cashing, Inc. v. Cardegna",,1,,1,1,1,0,1,1,1,1,,,,,,,,,,,,,,,,
 article=Ministry of Defense and Support for Armed Forces of Islamic Republic of Iran v. Elahi,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 "Ash v. Tyson Foods, Inc.",,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
@@ -597,7 +597,7 @@ Boulware v. United States,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 #NAME?,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 Washington State Grange v. Washington State Republican Party,,1,,0,0,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 Snyder v. Louisiana,,1,,0,1,1,0,1,1,1,1,,,,,,,,,,,,,,,,
-Medellí_n v. Texas,,0.5,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
+Medell’_n v. Texas,,0.5,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
 "Hall Street Associates, L. L. C. v. Mattel, Inc.",,0,,1,0,1,1,1,0,1,1,,,,,,,,,,,,,,,,
 New Jersey v. Delaware,,1,,0,1,1,1,1,1,1,0,,,,,,,,,,,,,,,,
 United States v. Clintwood Elkhorn Mining Co.,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
@@ -643,8 +643,8 @@ Kennedy v. Louisiana,,1,,0,1,1,0,1,1,0,0,,,,,,,,,,,,,,,,
 Exxon Shipping Co. v. Baker,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 article=Morgan Stanley Capital Group Inc. v. Public Util. Dist. No. 1 of Snohomish Cty.,,0,,1,1,0,1,1,1,1,1,,,,,,,,,,,,,,,,
 District of Columbia v. Heller,,0,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
-Davis v. Federal Election Commäó»n,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
-article=2007 term per curiam opinions of the Supreme Court of the United States#Medellí_n v. Texas,,0,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
+Davis v. Federal Election CommŠ—Èn,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
+article=2007 term per curiam opinions of the Supreme Court of the United States#Medell’_n v. Texas,,0,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
 Moore v. United States,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
  Brunner v. Ohio Republican Party,,1,,1,1,1,1,1,1,1,1,,,,,,,,,,,,,,,,
 " Winter v. Natural Resources Defense Council, Inc.",,0,,1,1,0,1,0,0,1,1,,,,,,,,,,,,,,,,
@@ -857,7 +857,7 @@ Arizona Christian School Tuition Organization v. Winn,,,,1,1,,1,0,0,1,1,0,0,,,,,
 Cullen v. Pinholster,,,,1,1,,1,1,1,1,1,0,1,,,,,,,,,,,,,,
 Virginia Office for Protection and Advocacy v. Stewart,,,,1,1,,1,1,1,0,0,1,1,,,,,,,,,,,,,,
 Sossamon v. Texas,,,,1,1,,1,1,0,1,1,0,0,,,,,,,,,,,,,,
-United States v. Tohono Oäó»odham Nation,,,,1,1,,1,0,0.5,1,1,0.5,0.5,,,,,,,,,,,,,,
+United States v. Tohono OŠ—Èodham Nation,,,,1,1,,1,0,0.5,1,1,0.5,0.5,,,,,,,,,,,,,,
 AT&T Mobility v. Concepcion,,,,1,1,,1,0,0,1,1,0,0,,,,,,,,,,,,,,
 Montana v. Wyoming,,,,0,1,,1,1,1,1,1,1,1,,,,,,,,,,,,,,
 Bobby v. Mitts,,,,1,1,,1,1,1,1,1,1,1,,,,,,,,,,,,,,
@@ -880,7 +880,7 @@ Sykes v. United States,,,,0,1,,0.5,0,1,1,1,1,0,,,,,,,,,,,,,,
 "Talk America, Inc. v. Michigan Bell Telephone Co.",,,,1,1,,1,1,1,1,1,1,1,,,,,,,,,,,,,,
 DePierre v. United States,,,,1,1,,1,1,1,1,1,1,1,,,,,,,,,,,,,,
 Microsoft Corp. v. i4i Ltd. Partnership,,,,1,1,,0.5,1,1,1,1,1,1,,,,,,,,,,,,,,
-Nevada Commäó»n on Ethics v. Carrigan,,,,1,1,,1,1,1,1,0.5,1,1,,,,,,,,,,,,,,
+Nevada CommŠ—Èn on Ethics v. Carrigan,,,,1,1,,1,1,1,1,0.5,1,1,,,,,,,,,,,,,,
 "Janus Capital Group, Inc. v. First Derivative Traders",,,,1,1,,1,0,0,1,1,0,0,,,,,,,,,,,,,,
 United States v. Jicarilla Apache Nation,,,,1,1,,1,0.5,0.5,1,1,0,0,,,,,,,,,,,,,,
 #NAME?,,,,1,1,,1,1,1,1,1,1,1,,,,,,,,,,,,,,

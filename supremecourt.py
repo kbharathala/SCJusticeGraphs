@@ -38,32 +38,26 @@ def get_opinions(case):
 			opinions_list.append([justice, opinion])
 	return opinions_list
 
-case_list = []
-fieldnames = ['names']
-
-for i in range(2000, 2015):
+for i in range(2000, 2008):
+	print(i)
+	fieldnames = ['names']
 	f = open(str(i)+"Cases.txt", 'r')
 	text = f.read()
-	case_list = case_list + get_case_text(text)
+	case_list = get_case_text(text)
 	for judge in get_justices(text):
-		if judge.lower() not in fieldnames:
-			fieldnames.append(judge.lower())
+		fieldnames.append(judge.lower())
 
-#f = open('2014Cases.txt', 'r')
-#text = f.read()
-#case_list = get_case_text(text)
-
-with open('CasesTrial.csv', 'wb') as csvfile:
-	writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-	writer.writeheader()
-	for case in case_list:
-		judge_dict = {'names':get_case_name(case)}
-		for opinion in get_opinions(case):
-			if(opinion[1].find('dissent') != -1):
-				val = 0
-			elif(opinion[1].find('concurrence') != -1):
-				val = 0.5
-			elif(opinion[1].find('majority') != -1):
-				val = 1
-			judge_dict[opinion[0]] = val
-		writer.writerow(judge_dict)
+	with open(str(i)+"CasesTrial.csv", 'wb') as csvfile:
+		writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+		writer.writeheader()
+		for case in case_list:
+			judge_dict = {'names':get_case_name(case)}
+			for opinion in get_opinions(case):
+				if(opinion[1].find('dissent') != -1):
+					val = 0
+				elif(opinion[1].find('concurrence') != -1):
+					val = 0.5
+				elif(opinion[1].find('majority') != -1):
+					val = 1
+				judge_dict[opinion[0]] = val
+			writer.writerow(judge_dict)

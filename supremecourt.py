@@ -38,9 +38,8 @@ def get_opinions(case):
 			opinions_list.append([justice, opinion])
 	return opinions_list
 
-for i in range(2000, 2008):
-	print(i)
-	fieldnames = ['names']
+for i in range(2008, 2009):
+	fieldnames = ['names', 'alito']
 	f = open(str(i)+"Cases.txt", 'r')
 	text = f.read()
 	case_list = get_case_text(text)

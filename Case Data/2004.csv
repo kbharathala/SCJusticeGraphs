@@ -1,0 +1,10 @@
+,rehnquist,stevens,o'connor,scalia,kennedy,souter,thomas,ginsburg,breyer
+rehnquist,81,42,65,61,66,45,66,46,52
+stevens,42,81,53,40,48,65,40,66,61
+o'connor,65,53,81,54,65,56,57,53,62
+scalia,61,40,54,81,58,45,66,46,48
+kennedy,66,48,65,58,81,53,56,53,58
+souter,45,65,56,45,53,81,41,68,66
+thomas,66,40,57,66,56,41,81,40,44
+ginsburg,46,66,53,46,53,68,40,81,68
+breyer,52,61,62,48,58,66,44,68,81
